@@ -8,7 +8,7 @@
   --website-color: white;
   --website-bg: hsl(160, 45%, 18%);
   --nav-border-color: hsla(160, 91%, 39%, 0.813);
-  --nav-bg: hsla(157, 53%, 14%, 0.813);
+  --nav-bg: hsla(155, 62%, 11%, 0.813);
   --article-bg: aliceblue;
   --article-color: #444;
   --aside-color: hsla(160, 83%, 23%, 0.813);
@@ -24,14 +24,14 @@ body {
 }
 
 body > header {
-  padding: 1em 5em;
-  position: sticky;
-  top: -1px;
+  padding: 3em 5em;
+  /* position: sticky;
+  top: -1px; */
   display: flex;
   justify-content: space-between;
-  background-image: url("nature.jpg");
+  background-image: url("image.png");
   background-size: cover;
-  background-position: top;
+  background-position: bottom;
 }
 
 hgroup {
@@ -41,13 +41,14 @@ hgroup {
 }
 
 hgroup > h1 {
-  font-size: 50px;
+  font-size: 59px;
   font-weight: 500;
   letter-spacing: 1px;
+  padding-bottom: 0.2em;
 }
 
 hgroup > h3 {
-  font-size: 22px;
+  font-size: 30px;
   letter-spacing: 3px;
   padding-bottom: 0.3em;
   padding-left: 0.2em;
@@ -57,7 +58,7 @@ hgroup > h3 {
 nav {
   display: flex;
   flex-direction: row;
-  width: 30%;
+  width: 38%;
   align-items: end;
   margin-right: 3%;
 }
@@ -70,7 +71,6 @@ header > nav > ul {
 
 header > nav > ul > li {
   cursor: pointer;
-  font-size: 18px;
   letter-spacing: 0.5px;
   font-weight: 200;
   padding-block: 5px;
@@ -80,12 +80,12 @@ header > nav > ul > li {
 }
 
 header > nav > ul > li:hover {
-  border-bottom: 4px solid var(--nav-border-color);
   background: linear-gradient(0deg, var(--nav-bg), transparent);
+  border-bottom: 4px solid var(--nav-border-color);
 }
 
 header > nav > ul > li > a {
-  font-size: 20px;
+  font-size: 28px;
   letter-spacing: 1px;
   text-decoration: none;
   font-weight: 600;
@@ -193,7 +193,7 @@ main > aside > h3 {
 
 main > aside > a {
   display: block;
-  font-family: serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 22px;
   margin-block: 10px;
   color: var(--aside-color);
