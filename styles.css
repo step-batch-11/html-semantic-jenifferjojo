@@ -5,15 +5,16 @@
 }
 
 :root {
-  --website-color: #ddd;
-  --website-bg: hsl(160, 58%, 20%);
+  --website-color: white;
+  --website-bg: hsl(160, 45%, 18%);
   --nav-border-color: hsla(160, 91%, 39%, 0.813);
   --nav-bg: hsla(157, 53%, 14%, 0.813);
   --article-bg: aliceblue;
   --article-color: #444;
   --aside-color: hsla(160, 83%, 23%, 0.813);
-  --aside-bg: hsla(137, 56%, 90%, 0.813);
-  /* --section-header-bg: rgb(98, 29, 235); */
+  --aside-bg: hsla(136, 33%, 94%, 0.813);
+  --link-color: rgb(44, 138, 201);
+  /* --section-header-bg: rgb(98, 29, 235); */  
   /* --section-bg: rgb(15, 112,  197); */
 }
 
@@ -24,9 +25,13 @@ body {
 
 body > header {
   padding: 1em 5em;
-  background-color: var(--website-bg);
+  position: sticky;
+  top: -1px;
   display: flex;
   justify-content: space-between;
+  background-image: url("nature.jpg");
+  background-size: cover;
+  background-position: top;
 }
 
 hgroup {
@@ -46,22 +51,25 @@ hgroup > h3 {
   letter-spacing: 3px;
   padding-bottom: 0.3em;
   padding-left: 0.2em;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 30%;
-  justify-content: end;
+  align-items: end;
+  margin-right: 3%;
 }
 
 header > nav > ul {
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 header > nav > ul > li {
+  cursor: pointer;
   font-size: 18px;
   letter-spacing: 0.5px;
   font-weight: 200;
@@ -99,14 +107,15 @@ main {
 main > article {
   color: var(--article-color);
   width: 75%;
-  padding-block: 2em;
+  padding-top: 2em;
+  padding-bottom: 5em;
   padding-inline: 1em;
 }
 
 main > article > header {
   background-color: var(--section-header-bg);
   padding-bottom: 0.8em;
-  border-bottom: 5px solid var(--aside-bg);
+  border-bottom: 3px solid var(--aside-bg);
 }
 
 main > article > header > h2 {
@@ -129,14 +138,42 @@ main > article > section {
 
 main > article > section > h3 {
   font-size: 25px;
-  margin-top: 0.8em;
-  padding-bottom: 0.2em;
-  background-color: var(--section-bg);
+  margin-top: 1.3em;
+  margin-bottom: 0.6em;
+  font-weight: 500;
+}
+
+main > article > section > figure {
+  width: 100%;
+  font-size: 20px;
+  margin-block: 1.3em;
+}
+
+main > article > section > figure > img {
+  width: 100%;
+  font-size: 20px;
+}
+
+main > article > section > figure > figcaption {
+  font-size: 18px;
+  font-style: italic;
 }
 
 main > article > section > mark {
   color: var(--article-color);
-  background-color: var(--section-bg);
+  background-color: hsla(137, 69%, 72%, 0.813);
+}
+
+main > article > footer {
+  margin-top: 2em;
+  border-top: 3px solid var(--aside-bg);
+}
+
+main > article > footer > h3 {
+  font-size: 20px;
+  margin-top: 1.3em;
+  margin-bottom: 0.4em;
+  font-weight: 500;
 }
 
 main > aside {
@@ -160,13 +197,38 @@ main > aside > a {
   font-size: 22px;
   margin-block: 10px;
   color: var(--aside-color);
+  text-decoration: underline;
 }
 
 main > aside > a:hover {
-  text-decoration: underline solid;
+  cursor: pointer;
+  color: var(--link-color);
 }
 
 body > footer {
+  padding-block: 1em;
+  line-height: 1.6em;
+  text-align: center;
+  position: relative;
   color: var(--website-color);
   background-color: var(--website-bg);
+}
+
+body > footer > p > time {
+  font-size: 14px;
+}
+
+body > footer > dialog {
+  display: none;
+  position: absolute;
+  top: -70px;
+  left: 41%;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px 1px gray;
+  background-color: mintcream;
+}
+
+body > footer:hover dialog{
+  display: block;
 }
